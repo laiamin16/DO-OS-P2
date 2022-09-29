@@ -33,8 +33,9 @@ echo "============================="
 echo " Clone Landing page"
 echo "============================="
 
+rm -f master.zip
 wget https://codeload.github.com/sdcilsy/landing-page/zip/refs/heads/master
-sudo unzip master.zip
+sudo unzip master
 sudo rm -R /var/www/$1/public_html/*
 sudo rm -f /var/www/$1/public_html/*
 sudo mv landing-page-master/* /var/www/$1/public_html
