@@ -32,13 +32,16 @@ then
     echo "Config Database"
     echo "=============================>"
 
-    sudo mysql -u root -e "dbsosmed";
+   sudo mysql -u root -e "create database dbsosmed";
 
-    sudo mysql -u root dbsosmed < /var/www/html/dump.sql;
+sudo mysql -u root dbsosmed < /var/www/html/dump.sql;
 
-    sudo mysql -u root -e "create user 'devopscilsy'@'localhost' identified by '1234567890'";
+sudo mysql -u root -e "create user 'devopscilsy'@'localhost' identified by '1234567890'";
 
-    sudo mysql -u root -e "grant all privileges on *.* to 'devopscilsy'@'localhost'";
+sudo mysql -u root -e "grant all privileges on *.* to 'devopscilsy'@'localhost'";
+     
+     
+     
 
     echo "Setup selesai"
     exit 0
