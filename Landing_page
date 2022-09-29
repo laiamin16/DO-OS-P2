@@ -10,6 +10,7 @@ then
     sudo apt-get update
     echo "Melakukan Installasi Webserver"
     sudo apt-get install -y apache2 php php-mysql
+    sudo apt-get install unzip
     echo "Installasi Selesai"
     echo "=============================>"
     echo "Downloading Data"
@@ -19,13 +20,13 @@ then
     echo "=============================>"
     echo "Ekstrak File"
     echo "=============================>"
-    unzip master.zip
+    unzip master
     echo "=============================>"
     echo "Memindahkan data"
     echo "=============================>"
     sudo rm /var/www/html/*
     sudo rm -R /var/www/html/*
-    sudo mv landing-page/* /var/www/html
+    sudo mv landing-page-master/* /var/www/html
 
     echo "Setup selesai"
     exit 0
