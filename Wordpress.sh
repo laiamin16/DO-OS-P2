@@ -35,7 +35,7 @@ then
 
    sudo mysql -u root -e "create database wordpress";
 
-sudo mysql -u root wordpress < /var/www/html/dump.sql;
+sudo mysql -u root wordpress < /var/www/html/wp-config-sample.php;
 
 sudo mysql -u root -e "create user 'wordpress'@'localhost' identified by '1234567890'";
 
