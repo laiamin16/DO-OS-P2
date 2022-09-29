@@ -12,6 +12,7 @@ then
     sudo apt-get install -y apache2 php php-mysql
     echo "Melakukan Installasi Database Server"
     sudo apt-get install -y mysql-server
+    sudo apt-get install unzip
     echo "Installasi Selesai"
     echo "=============================>"
     echo "Downloading Data"
