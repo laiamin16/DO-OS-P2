@@ -13,6 +13,7 @@ sudo apt-get install -y phpmyadmin
 sudo php5enmod mcrypt
 sudo service apache2 restart
 
+sudo chown -R www-data:www-data /var/www
 sudo chown root:root /etc/phpmyadmin/ -R
 sudo chown root:www-data /etc/phpmyadmin/config-db.php
 sudo chown root:www-data /etc/phpmyadmin/htpasswd.setup
