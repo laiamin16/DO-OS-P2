@@ -33,13 +33,11 @@ then
     echo "Config Database"
     echo "=============================>"
 
-   sudo mysql -u root -e "create database $2";
+   sudo mysql -u root -e "create database wordpress";
 
-sudo mysql -u root $2 < /var/www/html/dump.sql;
+sudo mysql -u root -e "create user 'wordpress'@'localhost' identified by '1234567890'";
 
-sudo mysql -u root -e "create user '$2'@'localhost' identified by '1234567890'";
-
-sudo mysql -u root -e "grant all privileges on *.* to '$2'@'localhost'";
+sudo mysql -u root -e "grant all privileges on *.* to 'wordpress'@'localhost'";
      
      
      
